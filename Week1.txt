@@ -1,0 +1,31 @@
+----------------------------------------------------------------------Week-1 Assignment------------------------------------------------------
+
+1). Create a local repository
+	a). mkdir Nikhil
+	b). git init //initialize the git version control on this repository
+	---write some code----
+	c). git add . // add that file in staging area
+	d). git commit -m "commit with relevant messege"
+	e). git status // to see the status of working tree
+2). Create a remote repository
+	a). go to the github account (www.github.com/new) & click on *new repository* 
+		//screenShot is there for this
+3). Create a local branch
+	a). git branch feature
+	b). git branch Dev
+	c). git branch QA
+	d). git branch Delivery
+4). check-in , stage and commit the changes & push the files in feature branch
+	a). git status
+	b). git add .   //put the file in staging area
+	c). git commit -m "some messeges" //finally commit the file
+	d). git push -u origin feature -f    //push the files in feature branch
+
+5). promote code from feature branch to Dev branch by pull request
+	a). git checkout Dev
+	b). git pull <url of feature branch>
+6). How to commit latest code from remote branch to local branch
+	a). git checkout --track origin/feature
+			'or'
+	b). git checkout -b <localBranch> origin/<remoteBranch>
+7).explore difference between git pull & checkout
