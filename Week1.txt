@@ -29,3 +29,17 @@
 			'or'
 	b). git checkout -b <localBranch> origin/<remoteBranch>
 7).explore difference between git pull & checkout
+	a). pull- git pull contacts the remote repository identified by origin and looks for updates. It fetches any updates and 
+			then merges the changes into the target branch. It does not create a new branch.
+
+	b). checkout- git checkout -b <branch> origin/<branch> creates a new branch based on origin/<branch>, and 
+		      does not contact the remote repository. It looks at origin/<branch> as it currently exists in your local repository.
+8). 2 users checkout the same file & show the merge conflict & check-in
+	a). git checkout QA
+	b). echo "this is nikhil soni" >> file1.txt
+	c). git add .
+	d). git commit -m "1st commit"
+	e). git checkout Deliver
+	f). git checkout QA D:/git/file1.txt  //get the same file in Deliver that is in QA branch
+	     //changes the file and merge 
+	g). git merge be7da125d83a7482a49d4db5c8612d8cd532e8a1  //merge the current branch Deliver to QA,only Deliver branch exists
